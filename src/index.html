@@ -13,7 +13,24 @@
 </head>
 
 <body class="page">
-
+<section class="main">
+    <h1 class="main__title">Выберите способ 
+        заработка</h1>
+    <div class="main__container-item">
+        <div class="item">
+            <img src="<%=require('./images/desktop__icon.png').default%>" alt="Иконка монитора с графиком" class="item__img">
+            <h2 class="item__title">Самостоятельно торговать</h2>
+        </div>
+        <div class="item">
+            <img src="<%=require('./images/portfel__icon.png').default%>" alt="Иконка инвестиционого портефеля" class="item__img">
+            <h2 class="item__title">Инвестировать</h2>
+        </div>
+        <div class="item">
+            <img src="<%=require('./images/investor__icon.png').default%>" alt="Иконка инвестора" class="item__img">
+            <h2 class="item__title">Привлекать инвесторов</h2>
+        </div>
+    </div>
+</section> 
 
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
