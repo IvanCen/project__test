@@ -1,7 +1,4 @@
-@import url('_theme_tangerine/button_theme_tangerine.css');
-@import url('_theme_transparent_tangerine/button_theme_transparent_tangerine.css');
-@import url('_size_m/button_size_m.css');
-@import url('_size_s/button_size_s.css');
+@import url('_theme_green/button_theme_green.css');
 
 .button
 {

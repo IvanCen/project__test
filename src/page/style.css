@@ -2,4 +2,149 @@
 @import url('../blocks/button/button.css');
 
 
+.title {
+    font-size: 2.250em;
+    font-weight: normal;
+    margin: 0 1em;
+    text-align: center;
+}
 
+.item__img {
+    max-width: 35px;
+    max-height: 35px;
+    margin-right: 20px;
+}
+
+
+body {
+  background: #ededed;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 14px;
+  
+}
+
+.container {
+  width:100%;
+  background-image: url('../images/main__pic.png');
+  background-position: bottom;
+  height: 100vh;
+}
+
+.title {
+  padding: 25px 0;
+  font-weight: 400;
+  font-size:26px;
+  text-align: center
+}
+
+/* стили блока аккордеон */
+.accordion {
+  width:100%;
+  max-width: 600px; 
+  margin: 0 auto
+}
+/* секции аккордеона */
+.accordion .accordion_item {
+  margin-bottom:1px;
+  position:relative;
+  margin: 13px 18px;
+}
+
+.accordion .accordion_title {
+    font-size: 19px;
+    font-weight: normal;
+    margin: 0;
+}
+/* заголовки панелей аккордеона */
+.accordion .title_block {
+  font-weight: 400;
+  font-size: 18px;
+  color: #2b2b2b;
+  cursor:pointer;
+  background-color: rgba(255, 255, 255, 0.6);;
+  transition:all .2s linear 0;
+  display: flex;
+  align-items: center;
+  height: 68px;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+/* переключатель панелей, положение вниз */
+.accordion .title_block:before {
+  content:'';
+  height:8px;
+  width:8px;
+  display:block;
+  border:2px solid #000000;
+  border-right-width:0;
+  border-top-width:0;
+  transform:rotate(-45deg);
+  position:absolute;
+  right:20px;
+}
+/* активный переключатель, положение вверх */
+.accordion .active_block .title_block:before {
+  border:2px solid #fefefe;
+  border-left-width:0;
+  border-bottom-width:0;
+}
+.accordion .title_block:hover {
+  opacity: 1;
+}
+
+.list-container {
+
+}
+
+.list-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.list-text {
+    margin: 0;
+}
+
+.list-number {
+    content: '1';
+    font-size: 2em;
+    color: #00b596;
+    margin-right: 21px;
+}
+
+.item_title {
+
+}
+
+/* блоки с содержанием */
+.accordion .info {
+  display:none;
+  padding:10px 15px;
+  overflow: hidden;
+}
+/* параграф внутри блоков с содержанием */
+.accordion .info_item {
+  margin-bottom:10px
+}
+/* картинки внутри аккордеона */
+.accordion .info img {
+    height: auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+/* полноразмерная картинка */
+.large-img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* миниатюра слева */
+.img-left {
+    width: 25%;
+    float:left;
+    margin:5px 15px 5px 0;
+}
+/* миниатюра справа */
+.img-right {
+    width: 25%;
+    float:right;
+    margin:5px 0 5px 15px;
+}
