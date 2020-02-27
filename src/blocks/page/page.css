@@ -13,5 +13,6 @@
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   width: 100%;
+  min-height: 1000px;
 }
 
