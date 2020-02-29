@@ -11,13 +11,15 @@ import "./page/style.css";
     })
 }(jQuery);
 
+let main = document.querySelector(".main");
 let container = document.querySelector(".container");
 let titleBlock = document.querySelectorAll(".title_block");
-container.style.backgroundImage = `url('../images/main__pic.png')`;
+main.style.backgroundImage = `url('./src/images/main__pic.png')`;
 (function () {
     for (let item of titleBlock) {
         item.addEventListener('click', () => {
             //container.style.backgroundImage = `url('./src/images/futures__pic.png')`;
+            container.style.backgroundImage = ``;
             container.classList.toggle("container-background");
         });
     }
