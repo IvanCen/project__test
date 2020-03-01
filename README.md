@@ -1,6 +1,6 @@
 # Project: test
 ## Что это?
-* Тестовое задание
+* Тестовое задание для компании АпТрейдер (UpTrader)
 
 ## Установка
 
@@ -34,5 +34,5 @@ npm run build
 ```
 
 ## Стек технологий
-HTML, CSS, JavaScript, Webpack.
+HTML, CSS, JavaScript(jQuery), Webpack.
 
