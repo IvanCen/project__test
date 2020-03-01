@@ -35,13 +35,13 @@ $('ul.tabs li').last().addClass("tab_last");
 
 let main = document.querySelector(".main");
 let container = document.querySelector(".container");
-let titleBlock = document.querySelectorAll(".title_block");
+let tabs = document.querySelectorAll(".tab");
 main.style.backgroundImage = `url('./src/images/main__pic.png')`;
 (function () {
-    for (let item of titleBlock) {
+    for (let item of tabs) {
         item.addEventListener('click', () => {
             //container.style.backgroundImage = `url('./src/images/futures__pic.png')`;
-            container.style.backgroundImage = ``;
+            //container.style.backgroundImage = ``;
             container.classList.toggle("container-background");
         });
     }

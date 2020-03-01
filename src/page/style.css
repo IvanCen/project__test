@@ -1,12 +1,8 @@
 @import url('../blocks/page/page.css');
 @import url('../blocks/button/button.css');
 
+.page {
 
-body {
-  background: #ededed;
-  font-family: 'Open Sans',sans-serif;
-  font-size: 14px;
-  
 }
 
 .top-nav {
@@ -45,18 +41,18 @@ header {
   text-align: center
 }
 
-h1,
-h2 {
-  font-weight: 300;
-  margin: 0 0 1rem 0;
-}
-
 .container {
   padding: 0;
-  margin: 0 auto;
   width: 100%;
-  max-width: 820px;
-  min-width: 320px;
+  height: 100%;
+  min-height: 700px;
+
+}
+
+.container-background {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../images/futures__pic.png');
 }
 
 .info {
@@ -94,10 +90,11 @@ h2 {
 ul.tabs {
   margin: 0;
   padding: 0;
-  float: left;
+  display: flex;
+  justify-content: space-evenly;
   list-style: none;
   height: 42px;
-  border-bottom: 1px solid #00655c;
+  border-bottom: solid 1px #b5b5b5;
   width: 100%;
 }
 
@@ -108,23 +105,12 @@ ul.tabs li {
   padding: 0 21px;
   height: 42px;
   line-height: 42px;
-  border-top: 1px solid #00655c;
-  border-left: 1px solid #00655c;
-  border-right: 1px solid #00b7a6;
-  background-color: #009688;
+
   color: #ddd;
   overflow: hidden;
   position: relative;
   font-size: 16px
 }
-
-
-/* указываем стиль правой границы у последней вкладки */
-
-.tab_last {
-  border-right: 1px solid #00655c;
-}
-
 
 /* стили вкладок при наведении */
 
@@ -139,8 +125,8 @@ ul.tabs li:hover {
 ul.tabs li.active {
   background-color: #fff;
   color: #333;
-  border-top: 2px solid green;
   display: block;
+  border-bottom: solid 3px #00978a;
 }
 
 
@@ -149,13 +135,9 @@ ul.tabs li.active {
 */
 
 .tab_container {
-  border: 1px solid #00655c;
-  border-top: none;
-  clear: both;
-  float: left;
   width: 100%;
   background: #fff;
-  overflow: auto;
+  background: transparent;
 }
 
 
@@ -165,7 +147,7 @@ ul.tabs li.active {
 */
 
 .tab_content {
-  padding: 20px;
+
   display: none;
 }
 
@@ -185,8 +167,6 @@ ul.tabs li.active {
 .tab_content img {
   width: 100%;
   height: auto;
-  -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -228,59 +208,86 @@ ul.tabs li.active {
 */
 
 @media screen and (max-width: 480px) {
+
   /* скрываем вкладки */
-  .tabs {
-      display: none;
+  ul.tabs {
+    display: none;
   }
+
   /* показываем элементы аккордеона */
   .tab_accordion {
-      position: relative;
-      background-color: #26A69A;
-      font-weight: 400;
-      font-size: 16px;
-      color: #ddd;
-      border-top: 1px solid #ccc;
-      margin: 0;
-      padding: 14px 20px;
-      display: block;
-      cursor: pointer;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    margin: 0 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff9;
   }
-  /* панели аккордеона при наведении */
-  .tab_accordion:hover {
-      background-color: #009688;
+
+  .tab_accordion-title {
+    margin: 0 20px 0 0;
+    font-size: 19px;
+    font-weight: normal;
+  }
+  .tab_accordion-img {
+    max-width: 35px;
+    max-height: 35px;
+    margin-right: 20px;
+  }
+  .tab_container-info {
+    padding: 20px;
   }
   /* переключатель вкладок, положение вниз */
   .tab_accordion:before {
-      content: '';
-      height: 8px;
-      width: 8px;
-      display: block;
-      border: 2px solid #fefefe;
-      border-right-width: 0;
-      border-top-width: 0;
-      -ms-transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      position: absolute;
-      right: 20px;
-      top: 18px
+    content: '';
+    height: 8px;
+    width: 8px;
+    display: block;
+    border: 2px solid #000000;
+    border-right-width: 0;
+    border-top-width: 0;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 20px;
   }
-  /* состояние активных панелей */
-  .d_active {
-      background-color: #008477;
-      color: #fff;
-  }
+
+
   /* активный переключатель, положение вверх */
   .d_active.tab_accordion:before {
-      border: 2px solid #fefefe;
-      border-left-width: 0;
-      border-bottom-width: 0;
-      top: 18px
+    border: 2px solid #000000;
+    border-left-width: 0;
+    border-bottom-width: 0;
+  }
+
+  .container-background {
+    background-image: none;
+  }
+
+  .container-sub {
+    display: none;
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    margin: 44px 20px 24px;
+  }
+  .container {
+    background-image: url('../images/main__pic.png');
+    background-position: top;
+    background-size: cover;
+  }
+  .list-item {
+    display: flex;
+  }
+  .list-text {
+    margin: 0;
+    margin-bottom: 10px;
   }
 }
