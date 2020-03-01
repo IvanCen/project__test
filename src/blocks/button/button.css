@@ -1,0 +1,19 @@
+@import url('_theme_green/button_theme_green.css');
+
+.button
+{
+    cursor: pointer;
+    width: 156px;
+  height: 45px;
+  border-radius: 3px;
+  background-color: #009e82;
+  margin-top: 44px;
+
+}
+
+.button:hover,
+.button:focus
+{
+    opacity: 0.7;
+    transition: ease 0.5s;
+}
