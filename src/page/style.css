@@ -168,7 +168,24 @@ ul.tabs li.active {
 /* Переход вкладок в режим аккордеона 
 * при достижении размера окна просмотра 480px 
 */
-
+.container-sub {
+  display: flex;
+  min-height: 1000px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title-sub {
+  display: block;
+  padding: 25px 0;
+  font-weight: 400;
+  font-size:26px;
+  text-align: center;
+  margin: 0;
+}
+.title {
+  display: none;
+}
 @media screen and (max-width: 480px) {
 
   /* скрываем вкладки */
@@ -242,6 +259,7 @@ ul.tabs li.active {
     font-weight: normal;
     text-align: center;
     margin: 44px 20px 24px;
+    display: block;
   }
 
   .container {
