@@ -2,50 +2,14 @@
 @import url('../blocks/button/button.css');
 
 .page {
-
-}
-
-.top-nav {
-  background: #009688;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
-  left: 0;
-  opacity: 0.95;
-  padding: 8px;
-  right: 0;
-  top: 0;
-  z-index: 9999;
-  margin: 0 auto
-}
-
-.topnav-wrapper {
-  margin: 0 auto;
-  max-width: 980px
-}
-
-.topnav-link {
-  float: right
-}
-
-.top-nav a {
-  text-decoration: none;
-  color: #d9d9d9
-}
-
-.top-nav a:hover {
-  color: #82eaae
-}
-
-header {
-  padding: 7vh 10vw;
-  color: #676767;
-  text-align: center
+  
 }
 
 .container {
   padding: 0;
   width: 100%;
   height: 100%;
-  min-height: 700px;
+  min-height: 1000px;
 
 }
 
@@ -54,21 +18,6 @@ header {
   background-repeat: no-repeat;
   background-image: url('../images/futures__pic.png');
 }
-
-.info {
-  margin: 50px auto;
-  text-align: center;
-}
-
-.info a {
-  text-decoration: none;
-  color: #016993;
-}
-
-.info a:hover {
-  color: #ad8c02;
-}
-
 
 /* Вкладки (табы)
 -----------------------------------------------------*/
@@ -147,15 +96,8 @@ ul.tabs li.active {
 */
 
 .tab_content {
-
+  overflow: hidden;
   display: none;
-}
-
-
-/* параграф внутри блоков с содержанием */
-
-.tab_content p {
-  margin-bottom: 10px
 }
 
 
@@ -167,15 +109,16 @@ ul.tabs li.active {
 .tab_content img {
   width: 100%;
   height: auto;
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
 /* полноразмерная картинка */
 
-.tab_content img .large-img {
-  width: 100%;
+.tab_content img {
   margin-bottom: 10px;
+  width: 165%;
+    height: 260px;
+    transform: translateX(-34%);
 }
 
 
@@ -202,6 +145,25 @@ ul.tabs li.active {
   display: none;
 }
 
+.list-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.list-text {
+  margin: 0;
+  padding-top: 1%;
+}
+
+.list-number {
+  content: '1';
+  font-size: 2em;
+  color: #00b596;
+  margin-right: 21px;
+}
+.info-img {
+  display: none;
+}
 
 /* Переход вкладок в режим аккордеона 
 * при достижении размера окна просмотра 480px 
@@ -234,14 +196,17 @@ ul.tabs li.active {
     font-size: 19px;
     font-weight: normal;
   }
+
   .tab_accordion-img {
     max-width: 35px;
     max-height: 35px;
     margin-right: 20px;
   }
+
   .tab_container-info {
     padding: 20px;
   }
+
   /* переключатель вкладок, положение вниз */
   .tab_accordion:before {
     content: '';
@@ -278,16 +243,14 @@ ul.tabs li.active {
     text-align: center;
     margin: 44px 20px 24px;
   }
+
   .container {
     background-image: url('../images/main__pic.png');
     background-position: top;
     background-size: cover;
   }
-  .list-item {
-    display: flex;
-  }
-  .list-text {
-    margin: 0;
-    margin-bottom: 10px;
+  .info-img {
+    display: block;
+    margin-bottom: 25px;
   }
 }
