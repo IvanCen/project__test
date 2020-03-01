@@ -1,48 +1,64 @@
 import "./page/style.css";
 
-// вкладки с содержанием
-// http://dbmast.ru
 $(".tab_content").hide();
 $(".tab_content:first").show();
-/* в режиме вкладок */
+
 $("ul.tabs li").click(function () {
     $(".tab_content").hide();
-    var activeTab = $(this).attr("rel");
+    let activeTab = $(this).attr("rel");
     $("#" + activeTab).fadeIn();
     $("ul.tabs li").removeClass("active");
     $(this).addClass("active");
     $(".tab_accordion").removeClass("d_active");
     $(".tab_accordion[rel^='" + activeTab + "']").addClass("d_active");
+    if($(".tab[rel^='tab1']").hasClass("active")){
+        $(".accordion_item-sub").removeClass("accordion_item-sub_hover");
+        $(".sub1").addClass("accordion_item-sub_hover");
+    }
+    if($(".tab[rel^='tab2']").hasClass("active")){
+        $(".accordion_item-sub").removeClass("accordion_item-sub_hover");
+        $(".sub2").addClass("accordion_item-sub_hover");
+    }
+    if($(".tab[rel^='tab3']").hasClass("active")){
+        $(".accordion_item-sub").removeClass("accordion_item-sub_hover");
+        $(".sub3").addClass("accordion_item-sub_hover");
+    }
 });
-/* в режиме аккордеона */
+$(".sub1").on('click', function() {
+    $(".tab_content").hide();
+    $("ul.tabs li").removeClass("active");
+    $(".accordion_item-sub").removeClass("accordion_item-sub_hover");
+    $(".tab[rel^='tab1']").addClass('active');
+    $(".tab_content:eq(0)").show();
+    $(this).addClass('accordion_item-sub_hover');
+});
+$(".sub2").on('click', function() {
+    $(".tab_content").hide();
+    $("ul.tabs li").removeClass("active");
+    $(".accordion_item-sub").removeClass("accordion_item-sub_hover");
+    $(".tab[rel^='tab2']").addClass('active');
+    $(".tab_content:eq(1)").show();
+    $(this).addClass('accordion_item-sub_hover');
+});
+$(".sub3").on('click', function() {
+    $(".tab_content").hide();
+    $("ul.tabs li").removeClass("active");
+    $(".accordion_item-sub").removeClass("accordion_item-sub_hover");
+    $(".tab[rel^='tab3']").addClass('active');
+    $(".tab_content:eq(2)").show();
+    $(this).addClass('accordion_item-sub_hover');
+});
+
 $(".tab_accordion").click(function () {
     $(".tab_content").hide();
-    var d_activeTab = $(this).attr("rel");
+    let d_activeTab = $(this).attr("rel");
     if (!$(this).hasClass('d_active')) {
         $("#" + d_activeTab).fadeIn();
         $(this).addClass("d_active");
         $("ul.tabs li").removeClass("active");
         $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
-    }else {
+    } else {
         $(".tab_content").hide();
         $(".tab_accordion").removeClass("d_active");
     }
 });
-/* дополнительный класс tab_last, 
-чтобы добавить границу к правой 
-стороне последней вкладки. */
-$('ul.tabs li').last().addClass("tab_last");
-
-let main = document.querySelector(".main");
-let container = document.querySelector(".container");
-let tabs = document.querySelectorAll(".tab");
-main.style.backgroundImage = `url('./src/images/main__pic.png')`;
-(function () {
-    for (let item of tabs) {
-        item.addEventListener('click', () => {
-            //container.style.backgroundImage = `url('./src/images/futures__pic.png')`;
-            //container.style.backgroundImage = ``;
-            container.classList.toggle("container-background");
-        });
-    }
-})();

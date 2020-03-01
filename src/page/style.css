@@ -1,16 +1,17 @@
 @import url('../blocks/page/page.css');
 @import url('../blocks/button/button.css');
 
-.page {
-  
-}
-
 .container {
   padding: 0;
   width: 100%;
   height: 100%;
-  min-height: 1000px;
+  min-height: 1100px;
+  background-image: url('../images/futures__pic.png');
+  background-size: cover;
+}
 
+.main {
+  background-image: url('../images/main__pic.png');
 }
 
 .container-background {
@@ -18,12 +19,6 @@
   background-repeat: no-repeat;
   background-image: url('../images/futures__pic.png');
 }
-
-/* Вкладки (табы)
------------------------------------------------------*/
-
-
-/* бфзовый контейнер вкладок(табов) */
 
 .tabs-box {
   display: inline-block;
@@ -33,55 +28,37 @@
   width: 100%;
 }
 
-
-/* панель вкладок */
-
-ul.tabs {
+.tabs {
   margin: 0;
-  padding: 0;
+  padding: 0 0 50px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   list-style: none;
   height: 42px;
   border-bottom: solid 1px #b5b5b5;
   width: 100%;
 }
 
-ul.tabs li {
-  float: left;
+.tab {
   margin: 0;
   cursor: pointer;
-  padding: 0 21px;
+  padding: 25px 21px;
   height: 42px;
   line-height: 42px;
-
-  color: #ddd;
-  overflow: hidden;
   position: relative;
-  font-size: 16px
+  font-size: 20px;
+  color: rgba(46, 46, 46, 0.8);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
 }
 
-/* стили вкладок при наведении */
-
-ul.tabs li:hover {
-  background-color: #26A69A;
-  color: #fefefe;
-}
-
-
-/* стили активных вкладок */
-
-ul.tabs li.active {
-  background-color: #fff;
-  color: #333;
+.active {
+  color: #000000;
   display: block;
-  border-bottom: solid 3px #00978a;
+  border-bottom: solid 2px #00978a;
+  color: #00978a;
 }
-
-
-/* контейнер вкладок первого уровня 
-* включающий в себя панели заголовков аккордеона
-*/
 
 .tab_container {
   width: 100%;
@@ -89,65 +66,44 @@ ul.tabs li.active {
   background: transparent;
 }
 
-
-/* блоки с содержанием по-умолчанию скрыты 
-* указать раскрытым при загрузке нужный блок
-* с помощью style="display: block;" в html
-*/
-
 .tab_content {
   overflow: hidden;
   display: none;
+  width: 100%;
 }
 
-
-/**
-* Изображения внутри вкладок
-* ...сделаем их отзывчивыми
-*/
-
-.tab_content img {
+.info-img {
+  margin-bottom: 10px;
+  width: 165%;
+  height: 260px;
+  transform: translateX(-34%);
   width: 100%;
   height: auto;
 }
 
-
-/* полноразмерная картинка */
-
-.tab_content img {
-  margin-bottom: 10px;
-  width: 165%;
-    height: 260px;
-    transform: translateX(-34%);
+.info_item {
+  line-height: 1.33;
+  max-width: 800px;
 }
-
-
-/* миниатюра слева */
-
-.tab_content img.img-left {
-  width: 25%;
-  float: left;
-  margin: 5px 15px 15px 0;
-}
-
-
-/* миниатюра справа */
-
-.tab_content img.img-right {
-  width: 25%;
-  float: right;
-  margin: 5px 0 15px 15px;
-}
-
-/* аккордеон скрыт в режиме вкладок */
 
 .tab_accordion {
   display: none;
 }
 
+.tab_container-info {
+  padding: 85px 0 0 19%;
+  width: 100%;
+}
+
+.list-title {
+  font-size: 22px;
+  font-weight: normal;
+  margin: 45px 0 35px;
+}
+
 .list-item {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .list-text {
@@ -161,39 +117,89 @@ ul.tabs li.active {
   color: #00b596;
   margin-right: 21px;
 }
+
 .info-img {
   display: none;
 }
 
-/* Переход вкладок в режим аккордеона 
-* при достижении размера окна просмотра 480px 
-*/
-.container-sub {
+.accordion-sub {
   display: flex;
-  min-height: 1000px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+
+}
+
+.accordion_main {
+  width: 100%;
+  height: 100%;
+  max-width: 365px;
+  min-height: 365px;
+  background-color: hsla(0, 0%, 100%, .5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.accordion_main:last-of-type {
+  margin-right: 1px;
+}
+
+.accordion_item-title {
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
+}
+
+.accordion_item-sub {
+  width: 95%;
+  min-height: 346px;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
+.accordion_item-sub_hover {
+  border-radius: 50%;
+  border: 1px solid #00b0a2;
+}
+
+.item__img-sub {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.container-sub {
+  display: flex;
+  min-height: 990px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .title-sub {
   display: block;
-  padding: 25px 0;
-  font-weight: 400;
-  font-size:26px;
+  padding: 80px 0;
+  font-weight: 300;
+  font-size: 38px;
   text-align: center;
   margin: 0;
 }
+
 .title {
   display: none;
 }
-@media screen and (max-width: 480px) {
 
-  /* скрываем вкладки */
-  ul.tabs {
+@media screen and (max-width: 800px) {
+  .tabs {
     display: none;
   }
 
-  /* показываем элементы аккордеона */
   .tab_accordion {
     position: relative;
     font-weight: 400;
@@ -202,7 +208,6 @@ ul.tabs li.active {
     margin: 0 20px;
     padding: 20px;
     display: flex;
-    justify-content: start;
     align-items: center;
     cursor: pointer;
     background-color: #fff9;
@@ -222,9 +227,9 @@ ul.tabs li.active {
 
   .tab_container-info {
     padding: 20px;
+    width: 90%;
   }
 
-  /* переключатель вкладок, положение вниз */
   .tab_accordion:before {
     content: '';
     height: 8px;
@@ -238,8 +243,6 @@ ul.tabs li.active {
     right: 20px;
   }
 
-
-  /* активный переключатель, положение вверх */
   .d_active.tab_accordion:before {
     border: 2px solid #000000;
     border-left-width: 0;
@@ -267,8 +270,14 @@ ul.tabs li.active {
     background-position: top;
     background-size: cover;
   }
+
   .info-img {
     display: block;
     margin-bottom: 25px;
+    transform: translateX(0);
+  }
+
+  .tab_content {
+    max-width: 100%;
   }
 }

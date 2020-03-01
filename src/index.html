@@ -5,11 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
         <title>test</title>
-
         <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
-
     </head>
 
     <body class="page">
@@ -18,52 +15,46 @@
                 <h1 class="title-sub">Выберите способ
                     заработка</h1>
                 <div class="accordion-sub">
-                    <div class="accordion_item-sub">
-                        <div class="title_block title_block_border-round">
+                    <div class="accordion_main">
+                        <div class="accordion_item-sub sub1">
                             <img src="<%=require('./images/desktop__icon.png').default%>"
                                 alt="Иконка монитора с графиком" class="item__img-sub">
-                            <h2 class="tab_accordion-title">Самостоятельно торговать</h2>
+                            <h2 class="accordion_item-title">Торговать</h2>
                         </div>
                     </div>
-
-                    <div class="accordion_item-sub">
-                        <div class="title_block title_block_border-round">
+                    <div class="accordion_main">
+                        <div class="accordion_item-sub sub2">
                             <img src="<%=require('./images/portfel__icon.png').default%>"
                                 alt="Иконка монитора с графиком" class="item__img-sub">
-                            <h2 class="tab_accordion-title">Инвестировать</h2>
+                            <h2 class="accordion_item-title">Инвестировать</h2>
                         </div>
                     </div>
 
-                    <div class="accordion_item-sub">
-                        <div class="title_block title_block_border-round">
+                    <div class="accordion_main">
+                        <div class="accordion_item-sub sub3">
                             <img src="<%=require('./images/investor__icon.png').default%>"
                                 alt="Иконка монитора с графиком" class="item__img-sub">
-                            <h2 class="tab_accordion-title">Привлекать инвесторов</h2>
+                            <h2 class="accordion_item-title">Привлекать инвесторов</h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container">
-            <!-- Базовый контейнер вкладок(табов) -->
             <div class="tabs-box">
                 <h2 class="title">Выберите способ
                     заработка</h2>
-                <!-- Список вкладок -->
                 <ul class="tabs">
-                    <li class="tab active" rel="tab1">Вкладка 1</li>
-                    <li class="tab" rel="tab2">Вкладка 2</li>
-                    <li class="tab" rel="tab3">Вкладка 3</li>
+                    <li class="tab active" rel="tab1">Торговать</li>
+                    <li class="tab" rel="tab2">Инвестировать</li>
+                    <li class="tab" rel="tab3">Привлекать инвесторов</li>
                 </ul>
-                <!-- Контейнер для блоков с содержанием -->
                 <div class="tab_container">
-                    <!-- Панель заголовка в режиме аккордеона -->
                     <div class="d_active tab_accordion" rel="tab1">
                         <img src="<%=require('./images/desktop__icon.png').default%>" alt="Иконка монитора с графиком"
                             class="tab_accordion-img">
-                        <h2 class="tab_accordion-title">Самостоятельно торговать</h2>
+                        <h2 class="tab_accordion-title">Торговать</h2>
                     </div>
-                    <!-- Блок вкладки с содержанием -->
                     <div id="tab1" class="tab_content" style="display: block;">
                         <div class="tab_container-info">
                             <p class="info_item">Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас
@@ -96,7 +87,6 @@
                         </div>
                         <img src="<%=require('./images/futures__pic.png').default%>" alt="" class="info-img ">
                     </div>
-                    <!-- конец #tab1 -->
                     <div class="tab_accordion" rel="tab2">
                         <img src="<%=require('./images/portfel__icon.png').default%>" alt="Иконка монитора с графиком"
                             class="tab_accordion-img">
@@ -113,8 +103,6 @@
                             <button class="button button_theme_green">Открыть счет</button>
                         </div>
                     </div>
-
-                    <!-- конец #tab2 -->
                     <div class="tab_accordion" rel="tab3">
                         <img src="<%=require('./images/investor__icon.png').default%>" alt="Иконка монитора с графиком"
                             class="tab_accordion-img ">
@@ -127,101 +115,19 @@
                                 тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок
                                 успешных
                                 трейдеров. Доходность ни чем не ограничена!</p>
+                                <p class="info_item">Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас
+                                    зарабатывал
+                                    тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок
+                                    успешных
+                                    трейдеров. Доходность ни чем не ограничена!</p>
                             <h2 class="list-title">Как это работает</h2>
                             <button class="button button_theme_green">Открыть счет</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- конец #tab3 -->
         </div>
-        <!-- конец .tab_container -->
 </div>
-<!-- конец .tabs-box -->
-</div>
-<!-- /.container -->
-<!-- End your code here -->
-<!--  <div class="container">
-            <h1 class="title">Выберите способ
-                заработка</h1>
-            <div class="accordion">
-                <div class="accordion_item">
-                    <div class="title_block title_block_border-bottom">
-                        <img src="<%=require('./images/desktop__icon.png').default%>" alt="Иконка монитора с графиком"
-                            class="item__img item__img-sub">
-                        <h2 class="tab_accordion-title">Самостоятельно торговать</h2>
-                    </div>
-                    <div class="info">
-                        <p class="info_item">Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас
-                            зарабатывал
-                            тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок
-                            успешных
-                            трейдеров. Доходность ни чем не ограничена!</p>
-                        <h2 class="list-item">Как это работает</h2>
-                        <div class="list-container">
-                            <div class="list-item"><span class='list-number'>1</span>
-                                <p class="list-text">Вы выбираете управляющего из рейтинга по фильтру Options</p>
-                            </div>
-                            <div class="list-item"><span class='list-number'>2</span>
-                                <p class="list-text">Вы выбираете управляющего из рейтинга по фильтру Options</p>
-                            </div>
-                            <div class="list-item"><span class='list-number'>3</span>
-                                <p class="list-text">Вы выбираете управляющего из рейтинга по фильтру Options</p>
-                            </div>
-                            <div class="list-item"><span class='list-number'>4</span>
-                                <p class="list-text">Вы выбираете управляющего из рейтинга по фильтру Options</p>
-                            </div>
-                            <div class="list-item"><span class='list-number'>5</span>
-                                <p class="list-text">Вы выбираете управляющего из рейтинга по фильтру Options</p>
-                            </div>
-                            <div class="list-item"><span class='list-number'>6</span>
-                                <p class="list-text">Вы выбираете управляющего из рейтинга по фильтру Options</p>
-                            </div>
-                        </div>
-                        <button class="button button_theme_green">Открыть счет</button>
 
-                        <img src="<%=require('./images/futures__pic.png').default%>" alt=""
-                            class="info-img ">
-                    </div>
-                </div>
-                <div class="accordion_item">
-                    <div class="title_block title_block_border-bottom">
-                        <img src="<%=require('./images/portfel__icon.png').default%>" alt="Иконка монитора с графиком"
-                            class="item__img ">
-                        <h2 class="tab_accordion-title">Инвестировать</h2>
-                    </div>
-                    <div class="info">
-
-                        <p class="info_item"><img src="https://placeimg.com/250/200/nature" class="img-left">Я совсем
-                            один и
-                            блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так
-                            упоен ощущением покоя, что искусство мое страдает от этого.</p>
-                        <h2 class="list-item">Как это работает</h2>
-
-                    </div>
-                </div>
-                <div class="accordion_item">
-                    <div class="title_block title_block_border-bottom">
-                        <img src="<%=require('./images/investor__icon.png').default%>" alt="Иконка монитора с графиком"
-                            class="item__img ">
-                        <h2 class="tab_accordion-title">Привлекать инвесторов</h2>
-                    </div>
-                    <div class="info">
-
-                        <p class="info_item"><img src="https://placeimg.com/250/200/animals"
-                                class="img-right">Проснувшись
-                            однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели
-                            превратился в страшное насекомое.</p>
-                        <h2 class="list-item">Как это работает</h2>
-                    </div>
-
-                </div>
-             -->
-<!-- конец блока аккордеон -->
-</div>
-</div>
-</div>
 <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
-
-</div>
